@@ -1,27 +1,9 @@
-<!--
-  <mat-toolbar
-  [class.mat-elevation-z2]="!isActive"
-  color="primary"
-  class="navbar"
->
-  <span>{{ title }}</span>
-
-  <div class="navbar-content">
-    <a mat-icon-button class="navbar-toggle">
-      <mat-icon>menu</mat-icon>
-    </a>
-
-    <div class="navbar-items">
-      <button mat-button routerLink="">Home</button>
-      <button mat-button routerLink="accounts">Accounts</button>
-      <button mat-button routerLink="payments">Payments</button>
-    </div>
-  </div>
-</mat-toolbar>
-<router-outlet></router-outlet>
--->
 <div>
-  <mat-toolbar color="primary">
+  <mat-toolbar
+    color="primary"
+    [class.mat-elevation-z2]="!isActive"
+    class="toolbar"
+  >
     <div fxShow="true" fxHide.gt-sm="true">
       <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
@@ -51,6 +33,7 @@
       fxHide.gt-sm="true"
     >
       <div fxLayout="column">
+        <mat-toolbar style="opacity: 0;"></mat-toolbar>
         <button mat-button class="sidenav-button" routerLink="">Home</button>
         <button mat-button class="sidenav-button" routerLink="accounts">
           Accounts
@@ -61,7 +44,10 @@
       </div>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
-      <router-outlet></router-outlet>
+      <div style="height: 100vh;">
+        <mat-toolbar style="opacity: 0;"></mat-toolbar>
+        <router-outlet></router-outlet>
+      </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
