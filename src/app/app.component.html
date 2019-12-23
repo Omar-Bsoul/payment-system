@@ -1,5 +1,67 @@
+<!--
+  <mat-toolbar
+  [class.mat-elevation-z2]="!isActive"
+  color="primary"
+  class="navbar"
+>
+  <span>{{ title }}</span>
+
+  <div class="navbar-content">
+    <a mat-icon-button class="navbar-toggle">
+      <mat-icon>menu</mat-icon>
+    </a>
+
+    <div class="navbar-items">
+      <button mat-button routerLink="">Home</button>
+      <button mat-button routerLink="accounts">Accounts</button>
+      <button mat-button routerLink="payments">Payments</button>
+    </div>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>
+-->
 <div>
-  <h1>Hello Angular</h1>
-  <button mat-raised-button>Click Me</button>
-  <router-outlet></router-outlet>
+  <mat-toolbar color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <span>{{ title }}</span>
+
+    <div class="spacer"></div>
+    <div fxShow="true" fxHide.lt-md="true">
+      <button mat-button class="toolbar-button" routerLink="">Home</button>
+      <button mat-button class="toolbar-button" routerLink="accounts">
+        Accounts
+      </button>
+      <button mat-button class="toolbar-button" routerLink="payments">
+        Payments
+      </button>
+    </div>
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill class="sidenav-container">
+    <mat-sidenav
+      color="primary"
+      #sidenav
+      fxLayout="column"
+      mode="over"
+      opened="false"
+      fxHide.gt-sm="true"
+    >
+      <div fxLayout="column">
+        <button mat-button class="sidenav-button" routerLink="">Home</button>
+        <button mat-button class="sidenav-button" routerLink="accounts">
+          Accounts
+        </button>
+        <button mat-button class="sidenav-button" routerLink="payments">
+          Payments
+        </button>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>

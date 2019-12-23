@@ -1,0 +1,17 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar-button {
+  width: 8rem;
+  border-radius: 0;
+}
+
+.sidenav-container {
+  min-height: 92vh !important;
+
+  & .sidenav-button {
+    width: 16rem;
+    height: 3rem;
+  }
+}
