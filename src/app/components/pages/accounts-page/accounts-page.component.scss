@@ -1,0 +1,10 @@
+.accounts-grid {
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.add-account-fab {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2rem;
+}

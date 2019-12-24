@@ -11,5 +11,5 @@ export class PageItemComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit(): void {}
 }

@@ -3,21 +3,22 @@
   top: 0;
   z-index: 5;
 
-  & .spacer {
-    flex: 1 1 auto;
+  & .side-nav-toggle {
+    margin-right: 1rem;
   }
 
-  & .toolbar-button {
-    width: 6rem;
-    border-radius: 0;
+  & .toolbar-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    & .toolbar-button {
+      width: 6rem;
+      border-radius: 0;
+    }
   }
 }
 
-.sidenav-container {
-  min-height: 100vh !important;
-
-  & .sidenav-button {
-    width: 16rem;
-    height: 3rem;
-  }
+.side-nav-list {
+  width: 16rem;
 }

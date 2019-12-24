@@ -11,7 +11,9 @@ import {
   MatSidenavModule,
   MatToolbarModule,
   MatIconModule,
-  MatRippleModule
+  MatRippleModule,
+  MatGridListModule,
+  MatListModule
 } from "@angular/material";
 import { FlexLayoutModule } from "@angular/flex-layout";
 
@@ -19,6 +21,7 @@ import { AccountsPageComponent } from "./components/pages/accounts-page/accounts
 import { PaymentsPageComponent } from "./components/pages/payments-page/payments-page.component";
 import { HomePageComponent } from "./components/pages/home-page/home-page.component";
 import { PageItemComponent } from "./components/page-item/page-item.component";
+import { AccountItemComponent } from "./components/account-item/account-item.component";
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { PageItemComponent } from "./components/page-item/page-item.component";
     AccountsPageComponent,
     PaymentsPageComponent,
     HomePageComponent,
-    PageItemComponent
+    PageItemComponent,
+    AccountItemComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,9 @@ import { PageItemComponent } from "./components/page-item/page-item.component";
     MatToolbarModule,
     MatIconModule,
     FlexLayoutModule,
-    MatRippleModule
+    MatRippleModule,
+    MatGridListModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

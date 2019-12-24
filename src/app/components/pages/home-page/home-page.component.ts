@@ -11,7 +11,7 @@ export class HomePageComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.pages = [
       new Page("Accounts", "supervisor_account", "accounts"),
       new Page("Payments", "payment", "payments")

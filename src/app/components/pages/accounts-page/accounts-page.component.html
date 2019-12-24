@@ -1,1 +1,9 @@
-<p>accounts-page works!</p>
+<div class="page-content">
+  <div class="accounts-grid">
+    <app-account-item
+      *ngFor="let account of accounts"
+      [account]="account"
+    ></app-account-item>
+  </div>
+  <button mat-fab class="add-account-fab"><mat-icon>add</mat-icon></button>
+</div>
