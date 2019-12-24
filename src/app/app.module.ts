@@ -13,7 +13,8 @@ import {
   MatIconModule,
   MatRippleModule,
   MatGridListModule,
-  MatListModule
+  MatListModule,
+  MatInputModule
 } from "@angular/material";
 import { FlexLayoutModule } from "@angular/flex-layout";
 
@@ -22,6 +23,7 @@ import { PaymentsPageComponent } from "./components/pages/payments-page/payments
 import { HomePageComponent } from "./components/pages/home-page/home-page.component";
 import { PageItemComponent } from "./components/page-item/page-item.component";
 import { AccountItemComponent } from "./components/account-item/account-item.component";
+import { PaymentItemComponent } from './components/payment-item/payment-item.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { AccountItemComponent } from "./components/account-item/account-item.com
     PaymentsPageComponent,
     HomePageComponent,
     PageItemComponent,
-    AccountItemComponent
+    AccountItemComponent,
+    PaymentItemComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { AccountItemComponent } from "./components/account-item/account-item.com
     FlexLayoutModule,
     MatRippleModule,
     MatGridListModule,
-    MatListModule
+    MatListModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

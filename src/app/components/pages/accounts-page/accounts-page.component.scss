@@ -1,5 +1,14 @@
 .accounts-grid {
-  grid-template-columns: auto auto auto auto auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  max-width: 1920px;
+  margin: auto auto;
+
+  & .account-grid-item {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+    height: 12rem;
+  }
 }
 
 .add-account-fab {
@@ -7,4 +16,22 @@
   bottom: 0;
   right: 0;
   margin: 2rem;
+}
+
+@media all and (max-width: 1400px) {
+  .accounts-grid {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media all and (max-width: 1030px) {
+  .accounts-grid {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media all and (max-width: 690px) {
+  .accounts-grid {
+    grid-template-columns: auto;
+  }
 }

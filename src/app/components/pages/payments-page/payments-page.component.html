@@ -1,1 +1,10 @@
-<p>payments-page works!</p>
+<div class="page-content">
+  <div class="payments-grid">
+    <div *ngFor="let payment of payments" class="payment-grid-item">
+      <app-payment-item class="" [payment]="payment"></app-payment-item>
+    </div>
+  </div>
+  <button mat-fab class="add-payment-fab" routerLink="payments/add">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

@@ -1,9 +1,10 @@
 <div class="page-content">
   <div class="accounts-grid">
-    <app-account-item
-      *ngFor="let account of accounts"
-      [account]="account"
-    ></app-account-item>
+    <div *ngFor="let account of accounts" class="account-grid-item">
+      <app-account-item class="" [account]="account"></app-account-item>
+    </div>
   </div>
-  <button mat-fab class="add-account-fab"><mat-icon>add</mat-icon></button>
+  <button mat-fab class="add-account-fab" routerLink="accounts/add">
+    <mat-icon>add</mat-icon>
+  </button>
 </div>

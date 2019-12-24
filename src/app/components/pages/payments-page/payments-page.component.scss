@@ -1,0 +1,37 @@
+.payments-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  max-width: 1920px;
+  margin: auto auto;
+
+  & .payment-grid-item {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+    height: 12rem;
+  }
+}
+
+.add-payment-fab {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2rem;
+}
+
+@media all and (max-width: 1400px) {
+  .payments-grid {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media all and (max-width: 1030px) {
+  .payments-grid {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media all and (max-width: 690px) {
+  .payments-grid {
+    grid-template-columns: auto;
+  }
+}

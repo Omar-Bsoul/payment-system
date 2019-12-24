@@ -3,5 +3,27 @@
   routerLink="accounts/{{ account.id }}"
   class="account-item"
 >
-  <p>{{ account.accountHolderName }}</p>
+  <div class="account-item-content">
+    <mat-icon inline="true" class="account-icon">person</mat-icon>
+    <div class="account-details">
+      <mat-form-field appearance="outline">
+        <mat-label>Account Number</mat-label>
+        <input matInput value="{{ account.accountNumber }}" [disabled]="true" />
+        <mat-icon matPrefix [style.margin-right]="'0.5rem'">
+          account_balance
+        </mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="outline" disabled="true">
+        <mat-label>Full Name</mat-label>
+        <input
+          matInput
+          value="{{ account.accountHolderName }}"
+          [disabled]="true"
+        />
+        <mat-icon matPrefix [style.margin-right]="'0.5rem'">
+          text_fields
+        </mat-icon>
+      </mat-form-field>
+    </div>
+  </div>
 </button>

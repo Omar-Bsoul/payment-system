@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Payment } from "src/app/models/Payment";
 
 @Component({
   selector: "app-payments-page",
@@ -6,7 +7,26 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./payments-page.component.scss"]
 })
 export class PaymentsPageComponent implements OnInit {
+  payments: Payment[];
+
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.payments = [
+      new Payment(),
+      new Payment(),
+      new Payment(),
+      new Payment(),
+      new Payment(),
+      new Payment(),
+      new Payment(),
+      new Payment(),
+      new Payment(),
+      new Payment(),
+      new Payment(),
+      new Payment(),
+      new Payment(),
+      new Payment()
+    ];
+  }
 }
