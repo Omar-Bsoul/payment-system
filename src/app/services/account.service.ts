@@ -203,7 +203,19 @@ export class AccountService {
   }
 
   getOne(id: string): Observable<Account> {
-    return this.http.get<Account>(`${this.baseUrl}/${id}`);
+    return Observable.create((observer: Observer<Account>) => {
+      observer.next(
+        new Account(
+          "abcd",
+          875,
+          "Some Body",
+          "09977225511",
+          "No Description at all."
+        )
+      );
+      observer.complete();
+    });
+    //return this.http.get<Account>(`${this.baseUrl}/${id}`);
   }
 
   createOne(payment: Account): Observable<Account> {

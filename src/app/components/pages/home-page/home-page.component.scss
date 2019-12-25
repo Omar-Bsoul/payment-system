@@ -1,7 +1,14 @@
 .home-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  height: 90vh;
+  height: 100%;
+}
+
+@media all and (max-width: 690px) {
+  .home-container {
+    flex-direction: column;
+  }
 }
