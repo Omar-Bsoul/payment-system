@@ -2,8 +2,8 @@ export class Payment {
   id: string;
   amount: number;
   currencyCode: string;
-  destinationAccountNumber: number;
   sourceAccountNumber: number;
+  destinationAccountNumber: number;
   paymentDescription: string;
 
   constructor();
@@ -11,23 +11,23 @@ export class Payment {
     id: string,
     amount: number,
     currencyCode: string,
-    destinationAccountNumber: number,
     sourceAccountNumber: number,
+    destinationAccountNumber: number,
     paymentDescription: string
   );
   constructor(
-    id?,
-    amount?,
-    currencyCode?,
-    destinationAccountNumber?,
-    sourceAccountNumber?,
-    paymentDescription?
+    id?: string,
+    amount?: number,
+    currencyCode?: string,
+    sourceAccountNumber?: number,
+    destinationAccountNumber?: number,
+    paymentDescription?: string
   ) {
     this.id = id;
     this.amount = amount;
     this.currencyCode = currencyCode;
-    this.destinationAccountNumber = destinationAccountNumber;
     this.sourceAccountNumber = sourceAccountNumber;
+    this.destinationAccountNumber = destinationAccountNumber;
     this.paymentDescription = paymentDescription;
   }
 }

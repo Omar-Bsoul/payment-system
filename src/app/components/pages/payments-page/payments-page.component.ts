@@ -13,20 +13,118 @@ export class PaymentsPageComponent implements OnInit {
 
   ngOnInit() {
     this.payments = [
-      new Payment(),
-      new Payment(),
-      new Payment(),
-      new Payment(),
-      new Payment(),
-      new Payment(),
-      new Payment(),
-      new Payment(),
-      new Payment(),
-      new Payment(),
-      new Payment(),
-      new Payment(),
-      new Payment(),
-      new Payment()
+      new Payment(
+        "Payment Id",
+        20,
+        "usd",
+        88775664285,
+        9541715085,
+        "No Desc At All"
+      ),
+      new Payment(
+        "Payment Id",
+        20,
+        "usd",
+        88775664285,
+        9541715085,
+        "No Desc At All"
+      ),
+      new Payment(
+        "Payment Id",
+        20,
+        "usd",
+        88775664285,
+        9541715085,
+        "No Desc At All"
+      ),
+      new Payment(
+        "Payment Id",
+        20,
+        "usd",
+        88775664285,
+        9541715085,
+        "No Desc At All"
+      ),
+      new Payment(
+        "Payment Id",
+        20,
+        "usd",
+        88775664285,
+        9541715085,
+        "No Desc At All"
+      ),
+      new Payment(
+        "Payment Id",
+        20,
+        "usd",
+        88775664285,
+        9541715085,
+        "No Desc At All"
+      ),
+      new Payment(
+        "Payment Id",
+        20,
+        "usd",
+        88775664285,
+        9541715085,
+        "No Desc At All"
+      ),
+      new Payment(
+        "Payment Id",
+        20,
+        "usd",
+        88775664285,
+        9541715085,
+        "No Desc At All"
+      ),
+      new Payment(
+        "Payment Id",
+        20,
+        "usd",
+        88775664285,
+        9541715085,
+        "No Desc At All"
+      ),
+      new Payment(
+        "Payment Id",
+        20,
+        "usd",
+        88775664285,
+        9541715085,
+        "No Desc At All"
+      ),
+      new Payment(
+        "Payment Id",
+        20,
+        "usd",
+        88775664285,
+        9541715085,
+        "No Desc At All"
+      ),
+      new Payment(
+        "Payment Id",
+        20,
+        "usd",
+        88775664285,
+        9541715085,
+        "No Desc At All"
+      ),
+      new Payment(
+        "Payment Id",
+        20,
+        "usd",
+        88775664285,
+        9541715085,
+        "No Desc At All"
+      ),
+      new Payment(
+        "Payment Id",
+        20,
+        "usd",
+        88775664285,
+        9541715085,
+        "No Desc At All"
+      )
     ];
   }
 }

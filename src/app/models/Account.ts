@@ -14,11 +14,11 @@ export class Account {
     accountDescription: string
   );
   constructor(
-    id?,
-    accountNumber?,
-    accountHolderName?,
-    accountHolderPhoneNumber?,
-    accountDescription?
+    id?: string,
+    accountNumber?: number,
+    accountHolderName?: string,
+    accountHolderPhoneNumber?: string,
+    accountDescription?: string
   ) {
     this.id = id;
     this.accountNumber = accountNumber;

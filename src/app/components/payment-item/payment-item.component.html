@@ -1,1 +1,22 @@
-<p>payment-item works!</p>
+<button mat-raised-button routerLink="{{ payment.id }}" class="payment-item">
+  <div class="payment-item-content">
+    <mat-icon inline="true" class="payment-icon">payment</mat-icon>
+    <div class="payment-details">
+      <app-data-viewer-field
+        label="From"
+        value="{{ payment.sourceAccountNumber }}"
+        icon="account_balance"
+      ></app-data-viewer-field
+      ><app-data-viewer-field
+        label="To"
+        value="{{ payment.destinationAccountNumber }}"
+        icon="account_balance"
+      ></app-data-viewer-field>
+      <app-data-viewer-field
+        label="Amount"
+        value="{{ payment.amount }} {{ payment.currencyCode | uppercase }}"
+        icon="attach_money"
+      ></app-data-viewer-field>
+    </div>
+  </div>
+</button>

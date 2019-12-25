@@ -2,24 +2,16 @@
   <div class="account-item-content">
     <mat-icon inline="true" class="account-icon">person</mat-icon>
     <div class="account-details">
-      <mat-form-field appearance="outline">
-        <mat-label>Account Number</mat-label>
-        <input matInput value="{{ account.accountNumber }}" [disabled]="true" />
-        <mat-icon matPrefix [style.margin-right]="'0.5rem'">
-          account_balance
-        </mat-icon>
-      </mat-form-field>
-      <mat-form-field appearance="outline" disabled="true">
-        <mat-label>Full Name</mat-label>
-        <input
-          matInput
-          value="{{ account.accountHolderName }}"
-          [disabled]="true"
-        />
-        <mat-icon matPrefix [style.margin-right]="'0.5rem'">
-          text_fields
-        </mat-icon>
-      </mat-form-field>
+      <app-data-viewer-field
+        label="Account Number"
+        value="{{ account.accountNumber }}"
+        icon="account_balance"
+      ></app-data-viewer-field>
+      <app-data-viewer-field
+        label="Full Name"
+        value="{{ account.accountHolderName }}"
+        icon="text_fields"
+      ></app-data-viewer-field>
     </div>
   </div>
 </button>
