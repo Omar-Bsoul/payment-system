@@ -1,20 +1,40 @@
 <div class="page-content">
-  <h1>
-    Account
-  </h1>
+  <header class="account-viewer-header">
+    <mat-card
+      matRipple
+      [style.width]="'2rem'"
+      [style.height]="'2rem'"
+      [style.border-radius]="'2rem'"
+    >
+      <mat-card-header>
+        <mat-icon mat-card-avatar [style.font-size]="'2rem'">person</mat-icon>
+      </mat-card-header>
+    </mat-card>
 
-  <mat-card
-    matRipple
-    [style.width]="'2rem'"
-    [style.height]="'2rem'"
-    [style.border-radius]="'2rem'"
-  >
-    <mat-card-header>
-      <mat-icon mat-card-avatar [style.font-size]="'2rem'">person</mat-icon>
-    </mat-card-header>
-  </mat-card>
-  <div>{{ account.accountHolderName }}</div>
-  <div>{{ account.accountNumber }}</div>
-  <div>{{ account.accountHolderPhoneNumber }}</div>
-  <div>{{ account.accountDescription }}</div>
+    <h1>
+      Account
+    </h1>
+  </header>
+
+  <div class="account-details-container">
+    <app-data-viewer-card
+      icon="text_fields"
+      content="{{ account.accountHolderName }}"
+    ></app-data-viewer-card>
+    <div class="spacer"></div>
+    <app-data-viewer-card
+      icon="account_balance"
+      content="{{ account.accountNumber }}"
+    ></app-data-viewer-card>
+    <div class="spacer"></div>
+    <app-data-viewer-card
+      icon="phone"
+      content="{{ account.accountHolderPhoneNumber }}"
+    ></app-data-viewer-card>
+    <div class="spacer"></div>
+    <app-data-viewer-card
+      icon="description"
+      content="{{ account.accountDescription }}"
+    ></app-data-viewer-card>
+  </div>
 </div>
