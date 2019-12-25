@@ -15,7 +15,7 @@ export class PaymentService {
     return Observable.create((observer: Observer<Payment[]>) => {
       observer.next([
         new Payment(
-          "Payment Id",
+          "payment_id",
           20,
           "usd",
           88775664285,
@@ -23,7 +23,7 @@ export class PaymentService {
           "No Desc At All"
         ),
         new Payment(
-          "Payment Id",
+          "payment_id",
           20,
           "usd",
           88775664285,
@@ -31,7 +31,7 @@ export class PaymentService {
           "No Desc At All"
         ),
         new Payment(
-          "Payment Id",
+          "payment_id",
           20,
           "usd",
           88775664285,
@@ -39,7 +39,7 @@ export class PaymentService {
           "No Desc At All"
         ),
         new Payment(
-          "Payment Id",
+          "payment_id",
           20,
           "usd",
           88775664285,
@@ -47,7 +47,7 @@ export class PaymentService {
           "No Desc At All"
         ),
         new Payment(
-          "Payment Id",
+          "payment_id",
           20,
           "usd",
           88775664285,
@@ -55,7 +55,7 @@ export class PaymentService {
           "No Desc At All"
         ),
         new Payment(
-          "Payment Id",
+          "payment_id",
           20,
           "usd",
           88775664285,
@@ -63,7 +63,7 @@ export class PaymentService {
           "No Desc At All"
         ),
         new Payment(
-          "Payment Id",
+          "payment_id",
           20,
           "usd",
           88775664285,
@@ -71,7 +71,7 @@ export class PaymentService {
           "No Desc At All"
         ),
         new Payment(
-          "Payment Id",
+          "payment_id",
           20,
           "usd",
           88775664285,
@@ -79,7 +79,7 @@ export class PaymentService {
           "No Desc At All"
         ),
         new Payment(
-          "Payment Id",
+          "payment_id",
           20,
           "usd",
           88775664285,
@@ -87,7 +87,7 @@ export class PaymentService {
           "No Desc At All"
         ),
         new Payment(
-          "Payment Id",
+          "payment_id",
           20,
           "usd",
           88775664285,
@@ -95,7 +95,7 @@ export class PaymentService {
           "No Desc At All"
         ),
         new Payment(
-          "Payment Id",
+          "payment_id",
           20,
           "usd",
           88775664285,
@@ -103,7 +103,7 @@ export class PaymentService {
           "No Desc At All"
         ),
         new Payment(
-          "Payment Id",
+          "payment_id",
           20,
           "usd",
           88775664285,
@@ -111,7 +111,7 @@ export class PaymentService {
           "No Desc At All"
         ),
         new Payment(
-          "Payment Id",
+          "payment_id",
           20,
           "usd",
           88775664285,
@@ -119,7 +119,7 @@ export class PaymentService {
           "No Desc At All"
         ),
         new Payment(
-          "Payment Id",
+          "payment_id",
           20,
           "usd",
           88775664285,
@@ -133,7 +133,20 @@ export class PaymentService {
   }
 
   getOne(id: string): Observable<Payment> {
-    return this.http.get<Payment>(`${this.baseUrl}/${id}`);
+    return Observable.create((observer: Observer<Payment>) => {
+      observer.next(
+        new Payment(
+          "payment_id",
+          20,
+          "usd",
+          88775664285,
+          9541715085,
+          "No Desc At All"
+        )
+      );
+      observer.complete();
+    });
+    //return this.http.get<Payment>(`${this.baseUrl}/${id}`);
   }
 
   createOne(payment: Payment): Observable<Payment> {

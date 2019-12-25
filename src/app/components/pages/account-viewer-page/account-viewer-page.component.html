@@ -18,21 +18,25 @@
 
   <div class="account-details-container">
     <app-data-viewer-card
+      label="Full Name"
       icon="text_fields"
       content="{{ account.accountHolderName }}"
     ></app-data-viewer-card>
     <div class="spacer"></div>
     <app-data-viewer-card
+      label="Account Number"
       icon="account_balance"
       content="{{ account.accountNumber }}"
     ></app-data-viewer-card>
     <div class="spacer"></div>
     <app-data-viewer-card
+      label="Phone"
       icon="phone"
       content="{{ account.accountHolderPhoneNumber }}"
     ></app-data-viewer-card>
     <div class="spacer"></div>
     <app-data-viewer-card
+      label="Description"
       icon="description"
       content="{{ account.accountDescription }}"
     ></app-data-viewer-card>

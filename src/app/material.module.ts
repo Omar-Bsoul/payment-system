@@ -8,7 +8,8 @@ import {
   MatGridListModule,
   MatListModule,
   MatInputModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatDividerModule
 } from "@angular/material";
 
 export const MaterialModules = [
@@ -21,5 +22,6 @@ export const MaterialModules = [
   MatGridListModule,
   MatListModule,
   MatInputModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatDividerModule
 ];

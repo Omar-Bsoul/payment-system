@@ -1,14 +1,21 @@
 <mat-card>
   <div class="data-viewer-container">
-    <mat-card matRipple class="data-viewer-icon-container">
-      <mat-card-header>
-        <mat-icon mat-card-avatar class="data-viewer-icon">
-          {{ icon }}
-        </mat-icon>
-      </mat-card-header>
-    </mat-card>
-    <p class="data-viewer-content">
-      {{ content }}
-    </p>
+    <h4>
+      {{ label }}
+      <mat-divider></mat-divider>
+    </h4>
+
+    <div class="data-viewer-content">
+      <mat-card matRipple class="data-viewer-icon-container">
+        <mat-card-header>
+          <mat-icon mat-card-avatar class="data-viewer-icon">
+            {{ icon }}
+          </mat-icon>
+        </mat-card-header>
+      </mat-card>
+      <p class="text-content">
+        {{ content }}
+      </p>
+    </div>
   </div>
 </mat-card>

@@ -9,7 +9,7 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./account-viewer-page.component.scss"]
 })
 export class AccountViewerPageComponent implements OnInit {
-  @Input() id: string;
+  id: string;
   account: Account;
 
   constructor(

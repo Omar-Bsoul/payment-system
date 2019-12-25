@@ -1,20 +1,32 @@
 .data-viewer-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
-  & .data-viewer-icon-container {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 2rem;
+  & h4 {
+    margin: 0.75rem 0.25rem;
 
-    .data-viewer-icon {
-      position: relative;
-      top: -0.4rem;
-      left: -0.5rem;
+    & div {
+      margin: 1rem;
     }
   }
 
   & .data-viewer-content {
+    display: flex;
+    flex-direction: row;
+
+    & .data-viewer-icon-container {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 2rem;
+
+      .data-viewer-icon {
+        position: relative;
+        top: -0.4rem;
+        left: -0.5rem;
+      }
+    }
+  }
+  & .text-content {
     margin: auto 1rem;
     width: 100%;
     text-align: justify;

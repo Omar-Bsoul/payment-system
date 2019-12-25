@@ -10,5 +10,6 @@
 @media all and (max-width: 690px) {
   .home-container {
     flex-direction: column;
+    overflow-y: scroll;
   }
 }
