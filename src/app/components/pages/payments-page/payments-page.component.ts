@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { Payment } from "src/app/models/Payment";
+import { Payment } from "../../../models/Payment";
+import { PaymentService } from "../../../services/payment.service";
 
 @Component({
   selector: "app-payments-page",
@@ -9,122 +10,11 @@ import { Payment } from "src/app/models/Payment";
 export class PaymentsPageComponent implements OnInit {
   payments: Payment[];
 
-  constructor() {}
+  constructor(private paymentService: PaymentService) {}
 
   ngOnInit() {
-    this.payments = [
-      new Payment(
-        "Payment Id",
-        20,
-        "usd",
-        88775664285,
-        9541715085,
-        "No Desc At All"
-      ),
-      new Payment(
-        "Payment Id",
-        20,
-        "usd",
-        88775664285,
-        9541715085,
-        "No Desc At All"
-      ),
-      new Payment(
-        "Payment Id",
-        20,
-        "usd",
-        88775664285,
-        9541715085,
-        "No Desc At All"
-      ),
-      new Payment(
-        "Payment Id",
-        20,
-        "usd",
-        88775664285,
-        9541715085,
-        "No Desc At All"
-      ),
-      new Payment(
-        "Payment Id",
-        20,
-        "usd",
-        88775664285,
-        9541715085,
-        "No Desc At All"
-      ),
-      new Payment(
-        "Payment Id",
-        20,
-        "usd",
-        88775664285,
-        9541715085,
-        "No Desc At All"
-      ),
-      new Payment(
-        "Payment Id",
-        20,
-        "usd",
-        88775664285,
-        9541715085,
-        "No Desc At All"
-      ),
-      new Payment(
-        "Payment Id",
-        20,
-        "usd",
-        88775664285,
-        9541715085,
-        "No Desc At All"
-      ),
-      new Payment(
-        "Payment Id",
-        20,
-        "usd",
-        88775664285,
-        9541715085,
-        "No Desc At All"
-      ),
-      new Payment(
-        "Payment Id",
-        20,
-        "usd",
-        88775664285,
-        9541715085,
-        "No Desc At All"
-      ),
-      new Payment(
-        "Payment Id",
-        20,
-        "usd",
-        88775664285,
-        9541715085,
-        "No Desc At All"
-      ),
-      new Payment(
-        "Payment Id",
-        20,
-        "usd",
-        88775664285,
-        9541715085,
-        "No Desc At All"
-      ),
-      new Payment(
-        "Payment Id",
-        20,
-        "usd",
-        88775664285,
-        9541715085,
-        "No Desc At All"
-      ),
-      new Payment(
-        "Payment Id",
-        20,
-        "usd",
-        88775664285,
-        9541715085,
-        "No Desc At All"
-      )
-    ];
+    this.paymentService.getAll().subscribe(payments => {
+      this.payments = payments;
+    });
   }
 }

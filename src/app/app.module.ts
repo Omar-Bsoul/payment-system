@@ -1,34 +1,24 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-import {
-  MatButtonModule,
-  MatCardModule,
-  MatSidenavModule,
-  MatToolbarModule,
-  MatIconModule,
-  MatRippleModule,
-  MatGridListModule,
-  MatListModule,
-  MatInputModule
-} from "@angular/material";
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { MaterialModules } from "./material.module";
 
 import { AccountsPageComponent } from "./components/pages/accounts-page/accounts-page.component";
 import { PaymentsPageComponent } from "./components/pages/payments-page/payments-page.component";
 import { HomePageComponent } from "./components/pages/home-page/home-page.component";
 import { PageItemComponent } from "./components/page-item/page-item.component";
+import { DataViewerFieldComponent } from "./components/data-viewer-field/data-viewer-field.component";
 import { AccountItemComponent } from "./components/account-item/account-item.component";
 import { PaymentItemComponent } from "./components/payment-item/payment-item.component";
 import { NewAccountPageComponent } from "./components/pages/new-account-page/new-account-page.component";
 import { NewPaymentPageComponent } from "./components/pages/new-payment-page/new-payment-page.component";
 import { AccountViewerPageComponent } from "./components/pages/account-viewer-page/account-viewer-page.component";
 import { PaymentViewerPageComponent } from "./components/pages/payment-viewer-page/payment-viewer-page.component";
-import { DataViewerFieldComponent } from './components/data-viewer-field/data-viewer-field.component';
 
 @NgModule({
   declarations: [
@@ -37,28 +27,21 @@ import { DataViewerFieldComponent } from './components/data-viewer-field/data-vi
     PaymentsPageComponent,
     HomePageComponent,
     PageItemComponent,
+    DataViewerFieldComponent,
     AccountItemComponent,
     PaymentItemComponent,
     NewAccountPageComponent,
     NewPaymentPageComponent,
     AccountViewerPageComponent,
-    PaymentViewerPageComponent,
-    DataViewerFieldComponent
+    PaymentViewerPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatCardModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatIconModule,
-    FlexLayoutModule,
-    MatRippleModule,
-    MatGridListModule,
-    MatListModule,
-    MatInputModule
+    ...MaterialModules
   ],
   providers: [],
   bootstrap: [AppComponent]
