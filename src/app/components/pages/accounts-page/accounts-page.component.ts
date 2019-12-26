@@ -12,6 +12,7 @@ export class AccountsPageComponent implements OnInit {
   accounts: Account[];
   accountsFiltered: Account[];
   search: string;
+  filter: boolean;
 
   constructor(private accountService: AccountService) {}
 
@@ -23,7 +24,9 @@ export class AccountsPageComponent implements OnInit {
 
   searchBy(_: string) {
     this.search = _;
+
     if (this.accounts) {
+      this.filter = this.search && this.search.length > 0;
       this.accountsFiltered = this.accounts.filter(account => {
         return (
           account.accountNumber.toString().startsWith(this.search) ||
@@ -33,9 +36,5 @@ export class AccountsPageComponent implements OnInit {
         );
       });
     }
-  }
-
-  get filter() {
-    return this.search && this.search.length > 0;
   }
 }

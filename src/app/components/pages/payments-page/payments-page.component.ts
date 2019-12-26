@@ -11,6 +11,7 @@ export class PaymentsPageComponent implements OnInit {
   payments: Payment[];
   paymentsFiltered: Payment[];
   search: string;
+  filter: boolean;
 
   constructor(private paymentService: PaymentService) {}
 
@@ -22,7 +23,9 @@ export class PaymentsPageComponent implements OnInit {
 
   searchBy(_: string) {
     this.search = _;
+
     if (this.payments) {
+      this.filter = this.search && this.search.length > 0;
       this.paymentsFiltered = this.payments.filter(payment => {
         return (
           payment.sourceAccountNumber.toString().startsWith(this.search) ||
@@ -30,9 +33,5 @@ export class PaymentsPageComponent implements OnInit {
         );
       });
     }
-  }
-
-  get filter() {
-    return this.search && this.search.length > 0;
   }
 }
