@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
   selector: "app-account-header",
@@ -6,6 +6,8 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./account-header.component.scss"]
 })
 export class AccountHeaderComponent implements OnInit {
+  @Input() plural: boolean;
+
   constructor() {}
 
   ngOnInit() {}

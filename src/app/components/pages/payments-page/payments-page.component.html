@@ -1,5 +1,18 @@
 <div class="page-content">
-  <div class="payments-grid">
+  <div class="payment-header">
+    <app-payment-header [plural]="true"></app-payment-header>
+    <app-search
+      searchBy="Source or Destination"
+      (ngModelChange)="searchBy($event)"
+    ></app-search>
+  </div>
+
+  <div class="payments-grid" *ngIf="!filter">
+    <div *ngFor="let payment of payments" class="payment-grid-item">
+      <app-payment-item class="" [payment]="payment"></app-payment-item>
+    </div>
+  </div>
+  <div class="payments-grid" *ngIf="filter">
     <div *ngFor="let payment of payments" class="payment-grid-item">
       <app-payment-item class="" [payment]="payment"></app-payment-item>
     </div>

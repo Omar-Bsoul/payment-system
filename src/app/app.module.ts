@@ -22,6 +22,7 @@ import { PaymentViewerPageComponent } from "./components/pages/payment-viewer-pa
 import { DataViewerCardComponent } from "./components/data-viewer-card/data-viewer-card.component";
 import { AccountHeaderComponent } from "./components/account-header/account-header.component";
 import { PaymentHeaderComponent } from "./components/payment-header/payment-header.component";
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { PaymentHeaderComponent } from "./components/payment-header/payment-head
     PaymentViewerPageComponent,
     DataViewerCardComponent,
     AccountHeaderComponent,
-    PaymentHeaderComponent
+    PaymentHeaderComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

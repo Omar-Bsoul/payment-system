@@ -1,6 +1,19 @@
 <div class="page-content">
-  <div class="accounts-grid">
+  <div class="account-header">
+    <app-account-header [plural]="true"></app-account-header>
+    <app-search
+      searchBy="Number or Name"
+      (ngModelChange)="searchBy($event)"
+    ></app-search>
+  </div>
+
+  <div class="accounts-grid" *ngIf="!filter">
     <div *ngFor="let account of accounts" class="account-grid-item">
+      <app-account-item class="" [account]="account"></app-account-item>
+    </div>
+  </div>
+  <div class="accounts-grid" *ngIf="filter">
+    <div *ngFor="let account of accountsFiltered" class="account-grid-item">
       <app-account-item class="" [account]="account"></app-account-item>
     </div>
   </div>

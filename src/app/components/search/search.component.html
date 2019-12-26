@@ -1,0 +1,11 @@
+<mat-form-field appearance="outline" class="search-bar">
+  <mat-label>{{ searchBy }}</mat-label>
+  <input
+    matInput
+    [(ngModel)]="ngModel"
+    (ngModelChange)="ngModelChange.emit($event)"
+  />
+  <mat-icon matPrefix [style.margin-right]="'0.5rem'">
+    search
+  </mat-icon>
+</mat-form-field>

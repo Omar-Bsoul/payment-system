@@ -1,3 +1,15 @@
+.account-header {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+
+  & app-search:last-child {
+    margin: auto;
+    width: calc(100% - 2rem);
+    max-width: 690px;
+  }
+}
+
 .accounts-grid {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -31,6 +43,13 @@
 }
 
 @media all and (max-width: 690px) {
+  .account-header {
+    & app-search:last-child {
+      margin: auto 1rem;
+      width: calc(100% - 2rem);
+    }
+  }
+
   .accounts-grid {
     grid-template-columns: auto;
   }
