@@ -18,6 +18,7 @@ export class PaymentViewerPageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.payment = new Payment();
     this.id = this.route.snapshot.paramMap.get("id");
     this.paymentService.getOne(this.id).subscribe(payment => {
       this.payment = payment;

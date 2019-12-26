@@ -1,3 +1,56 @@
 <div class="page-content">
-  <p>new-account-page works!</p>
+  <app-account-header></app-account-header>
+
+  <form (ngSubmit)="submit()" [formGroup]="accountForm">
+    <div class="account-details-container">
+      <mat-form-field appearance="outline" [style.width]="'100%'">
+        <mat-label>Holder Name</mat-label>
+        <input matInput formControlName="holderName" type="text" />
+        <mat-icon matPrefix [style.margin-right]="'0.5rem'">
+          text_fields
+        </mat-icon>
+        <mat-error *ngIf="holderName.invalid">{{ holderNameError }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" [style.width]="'100%'">
+        <mat-label>Account Number</mat-label>
+        <input matInput formControlName="number" type="text" />
+        <mat-icon matPrefix [style.margin-right]="'0.5rem'">
+          account_balance
+        </mat-icon>
+        <mat-error *ngIf="number.invalid">{{ numberError }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" [style.width]="'100%'">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone" type="text" />
+        <mat-icon matPrefix [style.margin-right]="'0.5rem'">
+          phone
+        </mat-icon>
+        <mat-error *ngIf="phone.invalid">{{ phoneError }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" [style.width]="'100%'">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description" type="text"></textarea>
+        <mat-icon matPrefix [style.margin-right]="'0.5rem'">
+          description
+        </mat-icon>
+        <mat-error *ngIf="description.invalid">{{
+          descriptionError
+        }}</mat-error>
+      </mat-form-field>
+
+      <div class="account-actions">
+        <button mat-button routerLink="/accounts">
+          <mat-icon [style.color]="'#F44336'">close</mat-icon>
+          Cancel
+        </button>
+        <button mat-button type="submit">
+          <mat-icon [style.color]="'#0277BD'">save</mat-icon>
+          Save
+        </button>
+      </div>
+    </div>
+  </form>
 </div>

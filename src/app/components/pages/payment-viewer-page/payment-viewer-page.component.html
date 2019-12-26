@@ -1,28 +1,7 @@
 <div class="page-content">
-  <header class="payment-viewer-header">
-    <mat-card
-      matRipple
-      [style.width]="'2rem'"
-      [style.height]="'2rem'"
-      [style.border-radius]="'2rem'"
-    >
-      <mat-card-header>
-        <mat-icon mat-card-avatar [style.font-size]="'2rem'">payment</mat-icon>
-      </mat-card-header>
-    </mat-card>
-
-    <h1>
-      Payment
-    </h1>
-  </header>
+  <app-payment-header></app-payment-header>
 
   <div class="payment-details-container">
-    <app-data-viewer-card
-      label="Amount"
-      icon="attach_money"
-      content="{{ payment.amount }} {{ payment.currencyCode | uppercase }}"
-    ></app-data-viewer-card>
-    <div class="spacer"></div>
     <app-data-viewer-card
       label="Source"
       icon="account_balance"
@@ -33,6 +12,12 @@
       label="Destination"
       icon="account_balance"
       content="{{ payment.destinationAccountNumber }}"
+    ></app-data-viewer-card>
+    <div class="spacer"></div>
+    <app-data-viewer-card
+      label="Amount"
+      icon="attach_money"
+      content="{{ payment.amount }} {{ payment.currencyCode | uppercase }}"
     ></app-data-viewer-card>
     <div class="spacer"></div>
     <app-data-viewer-card

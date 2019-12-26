@@ -1,0 +1,27 @@
+.account-details-container {
+  margin: auto auto;
+  padding: 0 1.5rem 1rem 1.5rem;
+
+  max-width: 1030px;
+
+  & .data-viewer {
+    width: 100%;
+  }
+
+  & .spacer {
+    height: 1rem;
+  }
+
+  & .account-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-size: 2rem;
+
+    & button {
+      width: 8rem;
+    }
+  }
+}

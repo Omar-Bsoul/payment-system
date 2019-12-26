@@ -1,24 +1,9 @@
 <div class="page-content">
-  <header class="account-viewer-header">
-    <mat-card
-      matRipple
-      [style.width]="'2rem'"
-      [style.height]="'2rem'"
-      [style.border-radius]="'2rem'"
-    >
-      <mat-card-header>
-        <mat-icon mat-card-avatar [style.font-size]="'2rem'">person</mat-icon>
-      </mat-card-header>
-    </mat-card>
-
-    <h1>
-      Account
-    </h1>
-  </header>
+  <app-account-header></app-account-header>
 
   <div class="account-details-container">
     <app-data-viewer-card
-      label="Full Name"
+      label="Holder Name"
       icon="text_fields"
       content="{{ account.accountHolderName }}"
     ></app-data-viewer-card>

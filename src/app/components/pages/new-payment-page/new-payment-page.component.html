@@ -1,3 +1,71 @@
 <div class="page-content">
-  <p>new-payment-page works!</p>
+  <app-payment-header></app-payment-header>
+
+  <form (ngSubmit)="submit()" [formGroup]="paymentForm">
+    <div class="payment-details-container">
+      <mat-form-field appearance="outline" [style.width]="'100%'">
+        <mat-label>Source Account</mat-label>
+        <input matInput formControlName="source" type="text" />
+        <mat-icon matPrefix [style.margin-right]="'0.5rem'">
+          account_balance
+        </mat-icon>
+        <mat-error *ngIf="source.invalid">{{ sourceError }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" [style.width]="'100%'">
+        <mat-label>Destination Account</mat-label>
+        <input matInput formControlName="destination" type="text" />
+        <mat-icon matPrefix [style.margin-right]="'0.5rem'">
+          account_balance
+        </mat-icon>
+        <mat-error *ngIf="destination.invalid">{{
+          destinationError
+        }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" [style.width]="'100%'">
+        <mat-label>Amount</mat-label>
+        <input matInput formControlName="amount" type="text" />
+        <mat-icon matPrefix [style.margin-right]="'0.5rem'">
+          attach_money
+        </mat-icon>
+        <mat-error *ngIf="amount.invalid">{{ amountError }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" [style.width]="'100%'">
+        <mat-select formControlName="currency" placeholder="Currency">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let _currency of currencies" value="option">{{
+            _currency
+          }}</mat-option>
+        </mat-select>
+        <mat-icon matPrefix [style.margin-right]="'0.5rem'">
+          monetization_on
+        </mat-icon>
+        <mat-error *ngIf="currency.invalid">{{ currencyError }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" [style.width]="'100%'">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description" type="text"></textarea>
+        <mat-icon matPrefix [style.margin-right]="'0.5rem'">
+          description
+        </mat-icon>
+        <mat-error *ngIf="description.invalid">{{
+          descriptionError
+        }}</mat-error>
+      </mat-form-field>
+
+      <div class="payment-actions">
+        <button mat-button routerLink="/payments">
+          <mat-icon [style.color]="'#F44336'">close</mat-icon>
+          Cancel
+        </button>
+        <button mat-button type="submit">
+          <mat-icon [style.color]="'#0277BD'">save</mat-icon>
+          Save
+        </button>
+      </div>
+    </div>
+  </form>
 </div>

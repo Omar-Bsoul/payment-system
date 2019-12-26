@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Observable, Observer } from "rxjs";
+import { Observable } from "rxjs";
 import { Account } from "../models/Account";
 
 @Injectable({
@@ -12,214 +12,15 @@ export class AccountService {
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<Account[]> {
-    return Observable.create((observer: Observer<Account[]>) => {
-      observer.next([
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        ),
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        )
-      ]);
-      observer.complete();
-    });
-    //return this.http.get<Account[]>(this.baseUrl);
+    return this.http.get<Account[]>(this.baseUrl);
   }
 
   getOne(id: string): Observable<Account> {
-    return Observable.create((observer: Observer<Account>) => {
-      observer.next(
-        new Account(
-          "abcd",
-          875,
-          "Some Body",
-          "09977225511",
-          "No Description at all."
-        )
-      );
-      observer.complete();
-    });
-    //return this.http.get<Account>(`${this.baseUrl}/${id}`);
+    return this.http.get<Account>(`${this.baseUrl}/${id}`);
   }
 
-  createOne(payment: Account): Observable<Account> {
-    return this.http.post<Account>(`${this.baseUrl}/add`, payment, {
+  createOne(account: Account): Observable<Account> {
+    return this.http.post<Account>(`${this.baseUrl}/add`, account, {
       headers: new HttpHeaders({
         "Content-Type": "application/json"
       })

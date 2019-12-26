@@ -18,6 +18,7 @@ export class AccountViewerPageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.account = new Account();
     this.id = this.route.snapshot.paramMap.get("id");
     this.accountService.getOne(this.id).subscribe(account => {
       this.account = account;

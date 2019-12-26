@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Observable, Observer } from "rxjs";
+import { Observable } from "rxjs";
 import { Payment } from "../models/Payment";
 
 @Injectable({
@@ -12,141 +12,11 @@ export class PaymentService {
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<Payment[]> {
-    return Observable.create((observer: Observer<Payment[]>) => {
-      observer.next([
-        new Payment(
-          "payment_id",
-          20,
-          "usd",
-          88775664285,
-          9541715085,
-          "No Desc At All"
-        ),
-        new Payment(
-          "payment_id",
-          20,
-          "usd",
-          88775664285,
-          9541715085,
-          "No Desc At All"
-        ),
-        new Payment(
-          "payment_id",
-          20,
-          "usd",
-          88775664285,
-          9541715085,
-          "No Desc At All"
-        ),
-        new Payment(
-          "payment_id",
-          20,
-          "usd",
-          88775664285,
-          9541715085,
-          "No Desc At All"
-        ),
-        new Payment(
-          "payment_id",
-          20,
-          "usd",
-          88775664285,
-          9541715085,
-          "No Desc At All"
-        ),
-        new Payment(
-          "payment_id",
-          20,
-          "usd",
-          88775664285,
-          9541715085,
-          "No Desc At All"
-        ),
-        new Payment(
-          "payment_id",
-          20,
-          "usd",
-          88775664285,
-          9541715085,
-          "No Desc At All"
-        ),
-        new Payment(
-          "payment_id",
-          20,
-          "usd",
-          88775664285,
-          9541715085,
-          "No Desc At All"
-        ),
-        new Payment(
-          "payment_id",
-          20,
-          "usd",
-          88775664285,
-          9541715085,
-          "No Desc At All"
-        ),
-        new Payment(
-          "payment_id",
-          20,
-          "usd",
-          88775664285,
-          9541715085,
-          "No Desc At All"
-        ),
-        new Payment(
-          "payment_id",
-          20,
-          "usd",
-          88775664285,
-          9541715085,
-          "No Desc At All"
-        ),
-        new Payment(
-          "payment_id",
-          20,
-          "usd",
-          88775664285,
-          9541715085,
-          "No Desc At All"
-        ),
-        new Payment(
-          "payment_id",
-          20,
-          "usd",
-          88775664285,
-          9541715085,
-          "No Desc At All"
-        ),
-        new Payment(
-          "payment_id",
-          20,
-          "usd",
-          88775664285,
-          9541715085,
-          "No Desc At All"
-        )
-      ]);
-      observer.complete();
-    });
-    //return this.http.get<Payment[]>(this.baseUrl);
+    return this.http.get<Payment[]>(this.baseUrl);
   }
 
   getOne(id: string): Observable<Payment> {
-    return Observable.create((observer: Observer<Payment>) => {
-      observer.next(
-        new Payment(
-          "payment_id",
-          20,
-          "usd",
-          88775664285,
-          9541715085,
-          "No Desc At All"
-        )
-      );
-      observer.complete();
-    });
-    //return this.http.get<Payment>(`${this.baseUrl}/${id}`);
+    return this.http.get<Payment>(`${this.baseUrl}/${id}`);
   }
 
   createOne(payment: Payment): Observable<Payment> {

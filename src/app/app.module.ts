@@ -1,7 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -20,6 +20,8 @@ import { NewPaymentPageComponent } from "./components/pages/new-payment-page/new
 import { AccountViewerPageComponent } from "./components/pages/account-viewer-page/account-viewer-page.component";
 import { PaymentViewerPageComponent } from "./components/pages/payment-viewer-page/payment-viewer-page.component";
 import { DataViewerCardComponent } from "./components/data-viewer-card/data-viewer-card.component";
+import { AccountHeaderComponent } from "./components/account-header/account-header.component";
+import { PaymentHeaderComponent } from "./components/payment-header/payment-header.component";
 
 @NgModule({
   declarations: [
@@ -35,14 +37,17 @@ import { DataViewerCardComponent } from "./components/data-viewer-card/data-view
     NewPaymentPageComponent,
     AccountViewerPageComponent,
     PaymentViewerPageComponent,
-    DataViewerCardComponent
+    DataViewerCardComponent,
+    AccountHeaderComponent,
+    PaymentHeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     ...MaterialModules
   ],
   providers: [],
