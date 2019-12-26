@@ -35,9 +35,11 @@
       <mat-form-field appearance="outline" [style.width]="'100%'">
         <mat-select formControlName="currency" placeholder="Currency">
           <mat-option>None</mat-option>
-          <mat-option *ngFor="let _currency of currencies" value="option">{{
-            _currency
-          }}</mat-option>
+          <mat-option
+            *ngFor="let _currency of currencies"
+            value="{{ _currency }}"
+            >{{ _currency }}</mat-option
+          >
         </mat-select>
         <mat-icon matPrefix [style.margin-right]="'0.5rem'">
           monetization_on

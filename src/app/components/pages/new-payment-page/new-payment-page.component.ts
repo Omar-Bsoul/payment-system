@@ -131,6 +131,8 @@ export class NewPaymentPageComponent implements OnInit {
   }
 
   get payment() {
+    console.log(this.currency);
+
     return new Payment(
       null,
       this.amount.value,
